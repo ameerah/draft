@@ -1,0 +1,102 @@
+%TC:macro \subtitle [header]
+%TC:newcounter todo Number of TODOs
+%TC:macro \todo [option:ignore]
+%TC:macrocount \todo [todo]
+
+\documentclass[draft]{sig-alternate}
+\makeatletter
+\def\@copyrightspace{\relax}
+\makeatother
+
+\usepackage[inline]{enumitem}
+\usepackage{pgfgantt}
+\usepackage[figuresright]{rotating}
+\usepackage{tabularx}
+
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+\cleanlookdateon
+
+\usepackage{ifdraft}
+\usepackage{xifthen}
+\usepackage{soul}
+\usepackage{xcolor}
+\newcommand{\todo}[1][]{\ifdraft{\ifthenelse{\isempty{#1}}{\hl{(TODO)}}{\hl{(TODO: #1)}}}{}}
+
+\begin{document}
+  
+  \title{Placeholder Title}
+  \author{
+    \alignauthor
+    Ameerah Allie\\
+    \affaddr{University of Cape Town}\\
+    \email{ameerah.allie@gmail.com}
+  }
+  \maketitle
+
+\begin{abstract}
+  \todo
+  \begin{itemize}
+    \item Background for project (TDDOnto from Maria and Agnieszka)
+    \item Describe work carried out incl. methodology
+    \item Identify need/purpose for work
+    \begin{itemize}
+      \item No systematic testing of reasoner performance
+      \item No systematic comparison of reasoners on metrics like (ontology size, test type etc)
+    \end{itemize}
+    \item Describe results of experiment
+    \item Indicate usefulness and significance of results/tests
+  \end{itemize}
+\end{abstract}
+
+\todo[ACM Keywords and CCS concepts section]
+
+\section{Introduction}
+\todo
+\begin{itemize}
+  \item Give background to project
+  \item Describe scope of document and project
+  \item Include explanation, summary and discussion of work
+  \begin{itemize}
+    \item includes why project is significant and its aims
+  \end{itemize}
+\end{itemize}
+
+\section{Related Works}
+\todo
+\begin{itemize}
+  \item Most salient points and works from literature review
+\end{itemize}
+
+\section{Materials and Methods}
+\todo
+
+To test performance of different reasoners, an experiment was designed.
+
+\subsection{Materials}
+
+
+\section{Results}
+\todo
+\begin{itemize}
+  \item Show results
+  \item Include text to link results together
+\end{itemize}
+
+\section{Discussion}
+\todo
+\begin{itemize}
+  \item Look at results, explain them and their significance
+  \item Evaluate project
+  \begin{itemize}
+    \item Consider what was done well, what could be improved on and specify future work
+  \end{itemize}
+\end{itemize}
+
+\section{Conclusions}
+\todo
+
+
+\bibliographystyle{abbrv}
+\bibliography{references}
+\end{document}
