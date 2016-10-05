@@ -17,6 +17,8 @@
 \usepackage[english]{isodate}
 \cleanlookdateon
 
+\usepackage{hyperref}
+
 \usepackage{ifdraft}
 \usepackage{xifthen}
 \usepackage{soul}
@@ -68,13 +70,24 @@
   \item Most salient points and works from literature review
 \end{itemize}
 
-\section{Materials and Methods}
+\section{Materials and Methodology}
 \todo
 
 An experiment was designed to measure the performance of different reasoners. The experiment design is detailed below along with materials used to carry out the experiment.
 
+\subsection{Experiment Overview}
+The aim of the the experiment is to benchmark reasoners, specifically within the context of Test-Driven Development of Ontologies. This requires the use of ``unit tests'' on which reasoners are used. These unit tests have been previously defined in the work of Keet and \L{}awrynowicz \todo[cite]. New test harnesses are constructed around these pre-defined unit tests. Each of these tests are performed on the same set of ontologies and each test is timed. These speeds for each reasoner allow us to measure how fast each reasoner performs against different ontology properties, like type of axiom and ontology size (detailed below).
+
+The development of the test harnesses and their integration with different reasoners were done in two phases: the test harnesses were first developed on a personal computer, and tested and edited there to ensure that they terminated and ran correctly; the tests were then run on the University of Cape Town cluster\footnote{\url{http://hex.uct.ac.za}} to ensure consistent testing conditions for accurate results.
+
 \subsection{Materials}
 
+
+\subsection{Methodology}
+
+\subsubsection{Implementation of Benchmarking Tests}
+
+\subsubsection{Analysis of Test Results}
 
 \section{Results}
 \todo
