@@ -3,7 +3,7 @@
 %TC:macro \todo [option:ignore]
 %TC:macrocount \todo [todo]
 
-\documentclass[draft]{sig-alternate}
+\documentclass[draft]{sig-alternate-05-2015}
 \makeatletter
 \def\@copyrightspace{\relax}
 \makeatother
@@ -51,7 +51,33 @@
   \end{itemize}
 \end{abstract}
 
-\todo[ACM Keywords and CCS concepts section]
+\begin{CCSXML}
+	<ccs2012>
+	<concept>
+	<concept_id>10010147.10010178.10010187.10010195</concept_id>
+	<concept_desc>Computing methodologies~Ontology engineering</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	<concept>
+	<concept_id>10011007.10011074.10011081</concept_id>
+	<concept_desc>Software and its engineering~Software development process management</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	<concept>
+	<concept_id>10011007.10011074.10011099.10011102.10011103</concept_id>
+	<concept_desc>Software and its engineering~Software testing and debugging</concept_desc>
+	<concept_significance>100</concept_significance>
+	</concept>
+	</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computing methodologies~Ontology engineering}
+\ccsdesc[500]{Software and its engineering~Software development process management}
+\ccsdesc[100]{Software and its engineering~Software testing and debugging}
+
+\printccsdesc
+
+\keywords{Ontology engineering; test-driven development; reasoners; benchmarking}
 
 \section{Introduction}
 \todo
@@ -127,7 +153,7 @@ The development of the test harnesses and their integration with different reaso
 \section{Conclusions}
 \todo
 
-
+\newpage
 \bibliographystyle{abbrv}
 \bibliography{references}
 \end{document}
