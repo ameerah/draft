@@ -94,15 +94,21 @@
 
 Ontology authoring, especially when low-level, does not have many methodologies to assist with development. In particular, there is assistance at the micro-level with the use of established Ontology Design Patterns, FORZA and other tools and processes but there is ``no systematic testbed \ldots to implement the [Competency Question] in the authoring process'' \cite{DBLP:journals/corr/KeetL15}. This indicates the need for exploration of low-level methodologies for ontology authoring.
 
-We are particularly concerned with the application of Test-Driven Development (TDD) to the development cycle of ontologies with regard to inserting axioms generated from Competency Questions (CQs) into an ontology. TDD is an established methodology for low-level software development which has in many studied cases improved software quality \cite{DBLP:journals/infsof/BissiNE16}. 
+We are particularly concerned with the application of the test-driven development methodology to the development cycle of ontologies with regard to inserting axioms generated from Competency Questions (CQs) into an ontology. Test-driven development is an established methodology for low-level software development which has in many studied cases improved software quality \cite{DBLP:journals/infsof/BissiNE16}. 
 
-Ontology development can benefit from applying the TDD process to the insertion of axioms into ontologies. The work of Keet and \L{}awrynowicz works towards defining and applying tests of ontologies for test-driven development of ontologies \cite{DBLP:journals/corr/KeetL15,DBLP:conf/esws/KeetL16}. The implementation of this \cite{DBLP:conf/dlog/LawrynowiczK16} and other tools in ontology development make use of reasoners \cite{DBLP:journals/corr/KeetL15}. This exposes a need for the testing and benchmarking of reasoners to determine when each one performs most efficiently in comparison to other reasoners, and to learn more about reasoner performance.
+Ontology development can benefit from applying the test-driven development process to the insertion of axioms into ontologies. The work of Keet and \L{}awrynowicz works towards defining and applying tests of ontologies for test-driven development of ontologies \cite{DBLP:journals/corr/KeetL15,DBLP:conf/esws/KeetL16}. The implementation of this \cite{DBLP:conf/dlog/LawrynowiczK16} and other tools in ontology development make use of reasoners \cite{DBLP:journals/corr/KeetL15}. This exposes a need for the testing and benchmarking of reasoners to determine when each one performs most efficiently in comparison to other reasoners, and to learn more about reasoner performance.
 
 This section considers the related work of concepts introduced above: test-driven development, ontology authoring and the application of test-driven development to it, and current use and comparison of reasoners.
 
 \subsection{Test-Driven Development in Software Development}
 
-\todo
+\subsubsection{The Test-Driven Development Process}
+
+Test-driven development describes the process of developing software whereby code is continuously tested against unit tests throughout the development cycle, determining when new code can be added. For every new piece of functionality to be added to software, a unit test for that functionality must be written to test whether or not it already exists in the software. The functionality must necessarily fail the new test. Code for that functionality must be added and the software must pass all previous unit tests and the new test. The code may be refactored if necessary and tests should be rerun to ensure that the refactoring has not changed the code's behaviour \cite{kumar2013comparative,DBLP:journals/infsof/PancurC11}.
+
+This describes a test-first approach \cite{DBLP:journals/infsof/BissiNE16} where coding is necessarily done in increments ensuring that errors caught by failed tests are picked up quickly through constant testing \cite{DBLP:journals/iee/MullerH02}.
+
+\subsubsection{The Benefits of Test-Driven Development}
 
 \subsection{Ontology Authoring and Test-Driven Development}
 
