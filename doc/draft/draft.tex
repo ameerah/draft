@@ -130,7 +130,28 @@ Current efforts into applying the test-driven development methodology include To
 
 For low-level ontology authoring, ontology developers typically use the reasoner and the Foundational Ontology and Reasoner-enhanced axiomatiZAtion (FORZA) to insert axioms into the ontology, or previously mentioned Ontology Design Patterns as guidance \cite{DBLP:conf/esws/KeetL16}. Often, new axioms added to existing, maintained ontologies are accepted simply if they do not cause an inconsistency \cite{DBLP:journals/ws/NikitinaRG12}. However, there is no standard set of tests or a testbed that may be applied to this level of ontology authoring. Developers insert their axiom in a haphazard fashion and check whether or not the reasoner accepts the given input. There is also no assurance of quality on this. This is because it is ``difficult to either specify the requirements for an ontology, or test their satisfaction'' according to Ren \textit{et al} \cite{DBLP:conf/esws/RenPMPDS14}.
 
+They propose a method for interpreting competency questions into a set of requirements for the ontology based on linguistic patterns in the competency questions and that these can be tested \cite{DBLP:conf/esws/RenPMPDS14}. This is a test-before approach as it tests for competency questions' ontology requirements prior to having the axioms they call for being inserted. 
+
+Keet and \L{}awrynowicz \cite{DBLP:conf/esws/KeetL16} take the approach of limiting their scope to inserting axioms into ontologies where the axioms have already been generated. It addresses questions of how we may be able to apply test-driven development to ontology authoring by considering what it means to test for the absence and inclusion of a feature in ontologies, what the ontology equivalent of mock objects are, if any, and how can this be integrated as a methodological task to be completed in the process of ontology development. The test-driven development for ontologies methodology process is as follows:
+
+\begin{enumerate}
+	\item Given an axiom for input, check that its vocubulary is in the ontology
+	\item Run the test twice:
+	\begin{enumerate}
+		\item The test should fail as the ontology fails to model the new axiom
+		\item Add the axiom to the ontology
+		\item The test should pass as the ontology is able to model the new axiom
+	\end{enumerate}
+	\item Run all previous tests (which should pass as in \textit{2c})
+\end{enumerate}
+
+The TDDOnto tool implements the test-driven development methodology for low-level ontology authoring \cite{DBLP:conf/dlog/LawrynowiczK16}.
+
+Other low-level tools include: \textit{Advocatus Diaboli} for assisting with the addition of negative constraints to the ontology \cite{DBLP:conf/ekaw/FerreR12} and the notion of unit testing of ontologies introduced by Vrande\v{c}i\'c and Gangemi \cite{DBLP:conf/otm/VrandecicG06}. 
+
 \subsection{Reasoner Use and Comparison}
+
+The implementation of these low-level methodologies and tools and, in particular, the TDDOnto tool \cite{DBLP:conf/dlog/LawrynowiczK16} use reasoners.
 
 \todo
 
