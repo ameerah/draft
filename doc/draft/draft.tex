@@ -120,7 +120,15 @@ Pan\v{c}ur and Ciglari\v{c} claim that studies on test-driven development like t
 
 \subsection{Ontology Authoring and Test-Driven Development}
 
-\todo
+There are existing methodologies for ontology development which provide high-level guidance for development like Methontology \cite{fernandez1997methontology}, NeOn \cite{DBLP:journals/ao/Suarez-Figueroa15} and the use of Ontology Design Patterns \cite{DBLP:conf/semweb/PresuttiDGB09}. These may assist with formalising scope, making design choices for the ontology, or other high-level actions but they do not help the ontology engineer with inserting axioms into the ontology.
+
+Previous studies on test-driven development were often concerned with implementing test-driven development in situations where alternative development methodologies already existed. This is not the case with ontology authoring where there is no real existing, alternative methodology at low-level development \cite{DBLP:journals/corr/KeetL15}. Current approaches are test-last approaches or adding code and seeing if the reasoner being used does not have a problem with it \cite{DBLP:conf/esws/KeetL16}.
+
+Test-driven development is a desirable methodology to apply to ontology development since it can provide a systematic testbed by which code can be tested. It could possibly improve code understanding and quality.
+
+Current efforts into applying the test-driven development methodology include Tort, Oliv\'{e} and Sancho's application of it to conceptual schemas \cite{DBLP:journals/dke/TortOS11}. Structurally, a conceptual schema is similar to an ontology in that it consists of a taxonomy of entities, relationships and constraints. In this tool, not much time was spent on writing test cases but principle of feature addition testing could be applied to ontologies.
+
+For low-level ontology authoring, ontology developers typically use the reasoner and the Foundational Ontology and Reasoner-enhanced axiomatiZAtion (FORZA) to insert axioms into the ontology, or previously mentioned Ontology Design Patterns as guidance \cite{DBLP:conf/esws/KeetL16}. Often, new axioms added to existing, maintained ontologies are accepted simply if they do not cause an inconsistency \cite{DBLP:journals/ws/NikitinaRG12}. However, there is no standard set of tests or a testbed that may be applied to this level of ontology authoring. Developers insert their axiom in a haphazard fashion and check whether or not the reasoner accepts the given input. There is also no assurance of quality on this. This is because it is ``difficult to either specify the requirements for an ontology, or test their satisfaction'' according to Ren \textit{et al} \cite{DBLP:conf/esws/RenPMPDS14}.
 
 \subsection{Reasoner Use and Comparison}
 
